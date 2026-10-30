@@ -15,7 +15,7 @@ export function Runtime() {
       <SectionHeading
         eyebrow="Runtime"
         title={['A runtime for', 'every next move.']}
-        lead="Create it. Run it. Branch it. Your agent calls, compute responds — and your agent stays in control."
+        lead="Create it. Run it. Branch it. Your agent calls, compute responds, and your agent stays in control."
       />
 
       <div ref={ref} className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">

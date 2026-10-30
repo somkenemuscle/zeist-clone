@@ -6,7 +6,7 @@
   --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono Variable", ui-monospace, monospace;
 
-  /* Surfaces, darkest to lightest — neutral black, no tint */
+  /* Neutral black surfaces, darkest to lightest */
   --color-void: #050505;
   --color-base: #0a0a0a;
   --color-surface: #111111;

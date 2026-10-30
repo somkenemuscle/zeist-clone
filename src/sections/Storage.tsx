@@ -96,7 +96,7 @@ export function Storage() {
             </h3>
             <p className="max-w-md text-lg leading-relaxed text-muted md:justify-self-end">
               Connect the storage you already use. Mount it at{' '}
-              <code className="font-mono text-[0.9em] text-ink">/mnt/data</code> — read only by default, and your
+              <code className="font-mono text-[0.9em] text-ink">/mnt/data</code>. It is read only by default, and your
               data stays with its provider.
             </p>
           </Reveal>

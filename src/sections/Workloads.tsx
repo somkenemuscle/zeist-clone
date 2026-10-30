@@ -16,7 +16,7 @@ export function Workloads() {
       <SectionHeading
         eyebrow="Workloads"
         title={['One runtime.', 'Many workloads.']}
-        lead="From agent loops to training runs — agents, experiments, evaluation cases, and the data between them."
+        lead="From agent loops to training runs. Agents, experiments, evaluation cases, and the data between them."
       />
 
       <div ref={ref}>
