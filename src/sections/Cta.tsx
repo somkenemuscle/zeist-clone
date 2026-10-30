@@ -39,7 +39,7 @@ export function Cta() {
         <h2 className="relative text-4xl font-semibold tracking-[-0.04em] text-ink sm:text-6xl md:text-7xl">
           Build what
           <br />
-          <span className="text-gradient">comes next.</span>
+          comes next.
         </h2>
         <p className="relative mx-auto mt-6 max-w-md text-lg text-muted">
           Bring your agent, your data, and your next workload. Join Zeist early access.

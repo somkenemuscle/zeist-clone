@@ -22,7 +22,7 @@ export function Section({ id, raised = false, className = '', children }: Sectio
 
 type SectionHeadingProps = {
   eyebrow: string
-  /** Two lines; the second is rendered in the brand gradient. */
+  /** Two lines, each revealed separately. */
   title: [string, string]
   lead: string
   align?: 'left' | 'center'
@@ -49,7 +49,7 @@ export function SectionHeading({ eyebrow, title, lead, align = 'left', children 
         {title.map((line, i) => (
           <span key={line} className="block overflow-hidden pb-1">
             <motion.span
-              className={`block ${i === 1 ? 'text-gradient' : ''}`}
+              className="block"
               initial={{ y: '105%' }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}

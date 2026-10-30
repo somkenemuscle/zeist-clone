@@ -145,16 +145,4 @@
     }
   }
 
-  .text-gradient {
-    background: linear-gradient(
-      100deg,
-      var(--color-ink) 10%,
-      var(--color-brand-pale) 45%,
-      var(--color-brand-soft) 70%,
-      var(--color-brand) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
 }
