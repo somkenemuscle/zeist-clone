@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 type CopyCommandProps = { command: string; className?: string }
 
-/** Terminal-style command with copy. Always dark, even inside light sections. */
+/** Terminal-style command with a copy button. */
 export function CopyCommand({ command, className = '' }: CopyCommandProps) {
   const [copied, setCopied] = useState(false)
 
@@ -20,7 +20,7 @@ export function CopyCommand({ command, className = '' }: CopyCommandProps) {
 
   return (
     <div
-      className={`theme-dark group/cmd flex items-center gap-3 rounded-xl border border-line bg-base py-2 pr-2 pl-4 font-mono text-[13px] transition-colors duration-300 hover:border-line-strong ${className}`}
+      className={`group/cmd flex items-center gap-3 rounded-xl border border-line bg-base py-2 pr-2 pl-4 font-mono text-[13px] transition-colors duration-300 hover:border-line-strong ${className}`}
     >
       <span className="text-brand-soft transition-transform duration-300 select-none group-hover/cmd:translate-x-0.5">
         $

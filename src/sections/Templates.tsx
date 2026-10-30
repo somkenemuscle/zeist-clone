@@ -6,7 +6,7 @@ import { TemplatePipeline } from '../components/visuals/TemplatePipeline'
 
 export function Templates() {
   return (
-    <Section id="templates" tone="light">
+    <Section id="templates" raised>
       <SectionHeading
         eyebrow="Templates & network"
         title={['Build once.', 'Run it again.']}

@@ -22,7 +22,7 @@ export function Storage() {
   }
 
   return (
-    <Section id="storage" tone="light">
+    <Section id="storage" raised>
       <SectionHeading
         eyebrow="Storage"
         title={['Compute moves.', 'Data stays.']}

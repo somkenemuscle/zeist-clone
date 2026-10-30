@@ -11,7 +11,7 @@ export function Runtime() {
   const step = lifecycle[index]
 
   return (
-    <Section id="runtime" tone="light">
+    <Section id="runtime" raised>
       <SectionHeading
         eyebrow="Runtime"
         title={['A runtime for', 'every next move.']}

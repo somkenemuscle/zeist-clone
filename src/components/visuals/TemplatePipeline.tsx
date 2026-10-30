@@ -115,7 +115,7 @@ type StageProps = { active: boolean; done: boolean; icon: ReactNode; title: stri
 function Stage({ active, done, icon, title, children }: StageProps) {
   return (
     <div
-      className={`theme-dark relative overflow-hidden rounded-2xl border bg-base p-5 transition-all duration-700 ${
+      className={`relative overflow-hidden rounded-2xl border bg-base p-5 transition-all duration-700 ${
         active ? 'border-brand/40 shadow-[0_0_60px_-25px_var(--color-brand)]' : 'border-line'
       }`}
     >

@@ -3,16 +3,18 @@ import type { ReactNode } from 'react'
 
 type SectionProps = {
   id?: string
-  /** Light sections use the paper palette; dark panels inside them stay dark. */
-  tone?: 'dark' | 'light'
+  /** Slightly lifted background with hairline edges, to give the page rhythm. */
+  raised?: boolean
   className?: string
   children: ReactNode
 }
 
-export function Section({ id, tone = 'dark', className = '', children }: SectionProps) {
-  const toneClass = tone === 'light' ? 'theme-light bg-void' : ''
+export function Section({ id, raised = false, className = '', children }: SectionProps) {
   return (
-    <section id={id} className={`relative py-24 sm:py-32 ${toneClass} ${className}`}>
+    <section
+      id={id}
+      className={`relative py-24 sm:py-32 ${raised ? 'border-y border-line bg-base' : ''} ${className}`}
+    >
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">{children}</div>
     </section>
   )
