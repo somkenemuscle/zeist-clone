@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useEffect, useRef } from 'react'
 
 type Tab = { id: string; label: string }
 
@@ -14,10 +15,22 @@ type TabsProps = {
 }
 
 export function Tabs({ tabs, index, onSelect, playing, interval = 5000, layoutId, className = '' }: TabsProps) {
+  const listRef = useRef<HTMLDivElement>(null)
+
+  // On narrow screens the strip scrolls sideways; keep the active tab centred in it
+  // (scrolling the strip itself, never the page).
+  useEffect(() => {
+    const list = listRef.current
+    const tab = list?.children[index] as HTMLElement | undefined
+    if (!list || !tab || list.scrollWidth <= list.clientWidth) return
+    list.scrollTo({ left: tab.offsetLeft - (list.clientWidth - tab.offsetWidth) / 2, behavior: 'smooth' })
+  }, [index])
+
   return (
     <div
+      ref={listRef}
       role="tablist"
-      className={`inline-flex max-w-full gap-1 overflow-x-auto rounded-full border border-line bg-surface/80 p-1 [scrollbar-width:none] ${className}`}
+      className={`relative inline-flex max-w-full gap-1 overflow-x-auto rounded-full border border-line bg-surface/80 p-1 [scrollbar-width:none] ${className}`}
     >
       {tabs.map((tab, i) => {
         const active = i === index

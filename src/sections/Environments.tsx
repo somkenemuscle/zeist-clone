@@ -95,6 +95,9 @@ export function Environments() {
   )
 }
 
+// The staggered "stack" look needs room, so it starts at sm
+const layerOffsets = ['sm:mr-6', 'sm:mx-3', 'sm:ml-6']
+
 function RecipeStack({ env }: { env: Environment }) {
   const layers = [
     { label: 'Start here', value: env.recipe, accent: true },
@@ -117,19 +120,18 @@ function RecipeStack({ env }: { env: Environment }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            style={{ marginLeft: `${i * 12}px`, marginRight: `${(2 - i) * 12}px` }}
-            className={`flex items-center justify-between rounded-lg border px-4 py-3 ${
+            className={`flex items-center justify-between gap-3 rounded-lg border px-3.5 py-3 sm:px-4 ${layerOffsets[i]} ${
               layer.accent ? 'border-brand/40 bg-brand/[0.07]' : 'border-line bg-panel'
             }`}
           >
-            <span className="text-xs text-muted">{layer.label}</span>
+            <span className="shrink-0 text-xs text-muted">{layer.label}</span>
             <AnimatePresence mode="wait" initial={false}>
               <motion.code
                 key={layer.value}
                 initial={{ opacity: 0, filter: 'blur(4px)' }}
                 animate={{ opacity: 1, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, filter: 'blur(4px)' }}
-                className={`font-mono text-[13px] ${layer.accent ? 'text-brand-pale' : 'text-copy'}`}
+                className={`truncate font-mono text-xs sm:text-[13px] ${layer.accent ? 'text-brand-pale' : 'text-copy'}`}
               >
                 {layer.value}
               </motion.code>

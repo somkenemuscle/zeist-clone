@@ -77,7 +77,7 @@ function Link({ icon, title, note, from, to, bidirectional, warn }: LinkProps) {
         </div>
         <p className="mt-0.5 text-xs text-dim">{note}</p>
       </div>
-      <div className="flex w-36 items-center gap-2 text-muted sm:w-44">
+      <div className="flex w-24 shrink-0 items-center gap-2 text-muted sm:w-44">
         {from}
         <div className="relative h-px flex-1 overflow-hidden bg-line-strong">
           <motion.span

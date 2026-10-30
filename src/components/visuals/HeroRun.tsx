@@ -28,12 +28,12 @@ export function HeroRun() {
     <div ref={ref} className="card relative overflow-hidden p-2">
       {/* Window chrome */}
       <div className="flex items-center justify-between gap-4 rounded-t-xl border-b border-line px-4 py-3">
-        <div className="flex gap-1.5">
+        <div className="hidden gap-1.5 sm:flex">
           {[0, 1, 2].map((i) => (
             <span key={i} className="size-2.5 rounded-full bg-white/10" />
           ))}
         </div>
-        <ol className="flex items-center gap-1 text-xs sm:gap-2">
+        <ol className="mx-auto flex items-center gap-1 text-[11px] whitespace-nowrap sm:mx-0 sm:gap-2 sm:text-xs">
           {STAGES.map((label, i) => (
             <li key={label} className="flex items-center gap-1 sm:gap-2">
               <span
